@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela inicial</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div></div>
+        <div id="divlogo">
+            <img src="../img/logoSemSufocoSemFundo.png" alt="Logo Sem Sufoco" class="logo">
+        </div>
+        <div></div>
+    </header>
+
+    <main id="mainInicial">
+        <section class="painelInicial">
+            <div class="boasVindas">
+                <div>
+                    <p class="textoApoio">Controle seus gastos de forma simples.</p>
+                    <h1 id="saudacao">Olá!</h1>
+                    <h2>Você já conhece as formas de como organizar seu dinherio? <a href="formaseconomia.html">Clique aqui!</a></h2>
+                </div>
+            </div>
+
+            <section class="seletorMes">
+                <div>
+                    <h2>Adicionar um mês</h2>
+                    <p>Escolha um mês para criar a tabela de produtos correspondente.</p>
+                </div>
+
+                <div class="controleMes">
+                    <select id="mesSelecionado">
+                        <option value="">Selecione um mês...</option>
+                        <option value="janeiro">Janeiro</option>
+                        <option value="fevereiro">Fevereiro</option>
+                        <option value="marco">Março</option>
+                        <option value="abril">Abril</option>
+                        <option value="maio">Maio</option>
+                        <option value="junho">Junho</option>
+                        <option value="julho">Julho</option>
+                        <option value="agosto">Agosto</option>
+                        <option value="setembro">Setembro</option>
+                        <option value="outubro">Outubro</option>
+                        <option value="novembro">Novembro</option>
+                        <option value="dezembro">Dezembro</option>
+                    </select>
+                    <button id="botaoAdicionarMes" class="botaoPrincipal" type="button">
+                        Criar mês
+                    </button>
+                </div>
+
+                <p id="avisoMes" class="mensagemAviso"></p>
+            </section>
+
+            <!-- Começa vazio. Os meses são criados aqui somente após a seleção. -->
+            <section id="containerMeses"></section>
+        </section>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

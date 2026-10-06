@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul-principal: #0f439b;
+    --azul-hover: #0d3b8a;
+    --azul-claro: #ebf2ff;
+    --azul-borda: #2053aa;
+    --texto: #202938;
+    --texto-suave: #667085;
+    --borda: #d8e2f2;
+    --fundo-suave: #f7f9fc;
+    --branco: #ffffff;
+    --vermelho: #b42318;
+}
+
+body {
+    background-color: var(--branco);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 2px solid var(--azul-borda);
+    background-color: var(--azul-claro);
+}
+
+#divlogo {
+    text-align: center;
+}
+
+.logo {
+    width: 300px;
+    max-width: 90%;
+}
+
+/* ==========================================================
+   PÁGINA DE CADASTRO
+   ========================================================== */
+
+#mainCadastro {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--branco);
+    padding-top: 30px;
+}
+
+#TelaLogin {
+    text-align: center;
+}
+
+#TelaLogin p {
+    color: var(--texto);
+    margin: 8px 0 5px;
+}
+
+#TelaLogin h2 {
+    color: var(--azul-principal);
+    margin-bottom: 10px;
+    font-family: "Goldman", sans-serif;
+}
+
+#tituloLogin {
+    font-size: 35px;
+}
+
+.InputCadastro {
+    width: 50%;
+    min-width: 260px;
+    height: 36px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    border: 1px solid #aebed6;
+    border-radius: 5px;
+    outline: none;
+}
+
+.InputCadastro:focus {
+    border-color: var(--azul-principal);
+}
+
+.BotaoCadastro,
+.botaoPrincipal {
+    border: none;
+    background-color: var(--azul-principal);
+    color: var(--branco);
+    font-family: "Goldman", sans-serif;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.BotaoCadastro {
+    width: 50.6%;
+    min-width: 260px;
+    height: 36px;
+    margin-top: 15px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.BotaoCadastro:hover,
+.botaoPrincipal:hover {
+    background-color: var(--azul-hover);
+    transform: translateY(-1px);
+}
+
+#aviso,
+.mensagemAviso {
+    min-height: 20px;
+    margin-top: 8px;
+    color: var(--vermelho);
+    font-size: 14px;
+}
+
+/* ==========================================================
+   TELA INICIAL
+   ========================================================== */
+
+#mainInicial {
+    display: block;
+    width: 100%;
+    padding: 35px 20px 60px;
+    background-color: var(--fundo-suave);
+    min-height: calc(100vh - 100px);
+}
+
+.painelInicial {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+}
+
+.boasVindas {
+    margin-bottom: 24px;
+}
+
+#saudacao {
+    color: var(--azul-principal);
+    font-family: "Goldman", sans-serif;
+    font-size: clamp(30px, 4vw, 46px);
+}
+
+.textoApoio,
+.seletorMes p,
+.legendaMes {
+    color: var(--texto-suave);
+}
+
+.textoApoio {
+    margin-bottom: 4px;
+}
+
+.seletorMes {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 22px;
+    margin-bottom: 24px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+}
+
+.seletorMes h2,
+.cabecalhoMes h2 {
+    color: var(--azul-principal);
+    font-family: "Goldman", sans-serif;
+}
+
+.seletorMes p {
+    margin-top: 5px;
+}
+
+.controleMes {
+    display: flex;
+    gap: 10px;
+    min-width: 380px;
+}
+
+#mesSelecionado {
+    flex: 1;
+    min-height: 42px;
+    padding: 0 12px;
+    border: 1px solid #aebed6;
+    border-radius: 8px;
+    background-color: var(--branco);
+    outline: none;
+}
+
+#mesSelecionado:focus {
+    border-color: var(--azul-principal);
+}
+
+.botaoPrincipal {
+    min-height: 42px;
+    padding: 0 18px;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+#containerMeses {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.campoMes {
+    padding: 24px;
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(15, 67, 155, 0.06);
+}
+
+.cabecalhoMes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.legendaMes {
+    margin-bottom: 3px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+.resumoMes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.resumoMes span {
+    color: var(--texto-suave);
+    font-size: 13px;
+}
+
+.resumoMes strong {
+    margin-top: 3px;
+    color: var(--azul-principal);
+    font-size: 21px;
+}
+
+.formProduto {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 12px;
+    align-items: end;
+    margin-top: 20px;
+}
+
+.grupoCampo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.grupoCampo label {
+    color: var(--texto);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.grupoCampo input {
+    width: 100%;
+    height: 42px;
+    padding: 0 10px;
+    border: 1px solid #aebed6;
+    border-radius: 7px;
+    outline: none;
+}
+
+.grupoCampo input:focus {
+    border-color: var(--azul-principal);
+}
+
+.botaoAdicionarProduto {
+    height: 42px;
+}
+
+.tabelaResponsiva {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 14px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+}
+
+th,
+td {
+    padding: 13px 12px;
+    border-bottom: 1px solid var(--borda);
+    text-align: left;
+}
+
+th {
+    background-color: var(--azul-claro);
+    color: var(--azul-principal);
+    font-size: 13px;
+}
+
+td {
+    font-size: 14px;
+}
+
+.linhaVazia td {
+    color: var(--texto-suave);
+    text-align: center;
+    padding: 22px;
+}
+
+.acoesTabela {
+    display: flex;
+    gap: 7px;
+}
+
+.botaoAcao {
+    padding: 7px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.botaoEditar {
+    border: 1px solid var(--azul-principal);
+    background-color: var(--branco);
+    color: var(--azul-principal);
+}
+
+.botaoEditar:hover {
+    background-color: var(--azul-claro);
+}
+
+.botaoApagar {
+    border: 1px solid #f0b7b3;
+    background-color: #fff5f4;
+    color: var(--vermelho);
+}
+
+.botaoApagar:hover {
+    background-color: #fee4e2;
+}
+
+/* ==========================================================
+   RESPONSIVIDADE
+   ========================================================== */
+
+@media (max-width: 850px) {
+    #mainCadastro {
+        display: block;
+        padding: 25px 20px;
+    }
+
+    .InputCadastro,
+    .BotaoCadastro {
+        width: min(500px, 100%);
+        min-width: 0;
+    }
+
+    .seletorMes {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .controleMes {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .formProduto {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .campoNome {
+        grid-column: 1 / -1;
+    }
+
+    .botaoAdicionarProduto {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 520px) {
+    .logo {
+        width: 220px;
+    }
+
+    #mainInicial {
+        padding: 25px 12px 40px;
+    }
+
+    .controleMes,
+    .cabecalhoMes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .resumoMes {
+        align-items: flex-start;
+    }
+
+    .formProduto {
+        grid-template-columns: 1fr;
+    }
+
+    .campoNome,
+    .botaoAdicionarProduto {
+        grid-column: auto;
+    }
+
+    .campoMes {
+        padding: 18px;
+    }
+}
+
+
+/* ==========================================================
+   RESUMO FINANCEIRO DO MÊS
+   ========================================================== */
+
+.resumosFinanceiros {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.resumosFinanceiros .resumoMes {
+    min-width: 145px;
+    padding: 10px 13px;
+    border: 1px solid var(--borda);
+    border-radius: 9px;
+    background-color: var(--fundo-suave);
+}
+
+.resumosFinanceiros .resumoMes strong {
+    display: block;
+}
+
+.resumosFinanceiros .resumoLucro strong {
+    color: var(--azul-principal);
+}
+
+.resumosFinanceiros .resumoLucro small {
+    display: block;
+    margin-top: 4px;
+    font-size: 11px;
+    line-height: 1.3;
+}
+
+.resumoLucro.situacaoPositiva {
+    border-color: #b7dfc1;
+    background-color: #f2fbf4;
+}
+
+.resumoLucro.situacaoPositiva strong,
+.resumoLucro.situacaoPositiva small {
+    color: #18753a;
+}
+
+.resumoLucro.situacaoNegativa {
+    border-color: #f0b7b3;
+    background-color: #fff5f4;
+}
+
+.resumoLucro.situacaoNegativa strong,
+.resumoLucro.situacaoNegativa small {
+    color: var(--vermelho);
+}
+
+.resumoLucro.situacaoNeutra {
+    border-color: var(--borda);
+}
+
+/* ==========================================================
+   ÁREAS DE RECEITAS E GASTOS
+   ========================================================== */
+
+.areaReceitas,
+.areaGastos {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid var(--borda);
+}
+
+.tituloSecao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 14px;
+}
+
+.tituloSecao h3 {
+    color: var(--azul-principal);
+    font-family: "Goldman", sans-serif;
+    font-size: 19px;
+}
+
+.tituloSecao p {
+    margin-top: 3px;
+    color: var(--texto-suave);
+    font-size: 13px;
+}
+
+.formReceita {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: end;
+}
+
+.formReceitaExtra {
+    display: grid;
+    grid-template-columns: 2fr 1fr auto;
+    gap: 12px;
+    align-items: end;
+    margin-top: 12px;
+}
+
+.extrasLista {
+    margin-top: 14px;
+}
+
+.tituloExtras {
+    margin-bottom: 8px;
+    color: var(--texto-suave);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.itemReceitaExtra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px 12px;
+    margin-bottom: 7px;
+    border: 1px solid var(--borda);
+    border-radius: 7px;
+    background-color: var(--fundo-suave);
+}
+
+.itemReceitaExtra > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.itemReceitaExtra span {
+    color: var(--texto-suave);
+    font-size: 13px;
+}
+
+@media (max-width: 850px) {
+    .cabecalhoMes {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .resumosFinanceiros {
+        justify-content: flex-start;
+    }
+
+    .formReceita,
+    .formReceitaExtra {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .formReceita .botaoPrincipal,
+    .formReceitaExtra .botaoPrincipal {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 520px) {
+    .resumosFinanceiros {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .resumosFinanceiros .resumoMes {
+        min-width: 0;
+    }
+
+    .formReceita,
+    .formReceitaExtra {
+        grid-template-columns: 1fr;
+    }
+
+    .formReceita .botaoPrincipal,
+    .formReceitaExtra .botaoPrincipal {
+        grid-column: auto;
+    }
+
+    .itemReceitaExtra {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

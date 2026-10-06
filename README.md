@@ -1,2 +1,2 @@
-# SiteSemSufoco
-Repositório utilizado para enviar ao professor a nossa página do projeto "Sem Sufoco"
+# SemSufoco
+Repositório utilizado para armazenar o código do MVP do grupo no projeto "Sem Sufoco"
